@@ -69,9 +69,10 @@ button:focus-visible {
 
 .navigation {
   display: flex;
+	
 }
 
-.navigation > div {
+.navigation > li {
   margin-left: 20px;
   list-style: none;
 }

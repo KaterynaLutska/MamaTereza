@@ -1,0 +1,12 @@
+{
+  "extends": ["eslint:recommended", "plugin:react/recommended", "plugin:import/errors", "plugin:import/warnings"],
+  "plugins": ["react", "import"],
+  "rules": {
+    "import/order": ["error", { "groups": [["builtin", "external", "internal"]] }]
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}

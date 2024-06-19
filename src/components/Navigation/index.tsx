@@ -1,20 +1,35 @@
 import React, { FC } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import AboutPage from "../../container/AboutPage";
-import ContactsPage from "../../container/ContactsPage";
-import HomePage from "../../container/HomePage";
-import UserAccount from "../UserAccount";
+import { NavigationKeys, NavigationProps } from "../../types.ts/Navigation";
+import NavigationItem from "./NavigationItem";
+
+const NAVIGATION: NavigationProps[] = [
+  {
+    name: NavigationKeys.HOME,
+    link: "/",
+  },
+  {
+    name: NavigationKeys.ABOUT,
+    link: "/about",
+  },
+  {
+    name: NavigationKeys.CONTACTS,
+    link: "/contacts",
+  },
+];
 
 const Navigation: FC = () => {
   return (
-    <>
-      <div className="navigation">
-        <HomePage />
-        <AboutPage />
-        <ContactsPage />
-      </div>
-      <UserAccount />
-    </>
+    <nav>
+      <ul className="navigation">
+        {NAVIGATION.map((item) => (
+          <li key={item.name}>
+            <NavigationItem name={item.name} link={item.link} />
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };
 
