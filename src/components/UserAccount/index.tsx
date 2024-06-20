@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from 'react';
+
+import CoreContext from '../../contexts/CoreContext';
+import { CoreContextProps } from '../../contexts/types/CoreContext';
 
 const UserAccount = () => {
-  const [isLogin, setLogin] = useState<boolean>(false);
+  const { isLoggedIn, setIsLoggedIn } = useContext<CoreContextProps>(CoreContext);
 
   const handleOnClick = () => {
-    setLogin(!isLogin);
+    setIsLoggedIn(!isLoggedIn);
   };
   return (
     <div>
-      <button onClick={handleOnClick}>{isLogin ? "Logout" : "Login"}</button>
+      <button onClick={handleOnClick}>{isLoggedIn ? 'Logout' : 'Login'}</button>
     </div>
   );
 };
