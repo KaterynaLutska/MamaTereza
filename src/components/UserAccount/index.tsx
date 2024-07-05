@@ -1,7 +1,10 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext } from "react";
 
-import CoreContext from '../../contexts/CoreContext';
-import { CoreContextProps } from '../../contexts/types/CoreContext';
+import { AccountCircle } from "@mui/icons-material";
+import { Button, IconButton } from "@mui/material";
+
+import CoreContext from "../../contexts/CoreContext";
+import { CoreContextProps } from "../../contexts/types/CoreContext";
 
 const UserAccount = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext<CoreContextProps>(CoreContext);
@@ -11,7 +14,10 @@ const UserAccount = () => {
   };
   return (
     <div>
-      <button onClick={handleOnClick}>{isLoggedIn ? 'Logout' : 'Login'}</button>
+      <Button onClick={handleOnClick} color="inherit">
+        {isLoggedIn ? "Logout" : "Login"}
+      </Button>
+      <IconButton color="inherit">{isLoggedIn && <AccountCircle />}</IconButton>
     </div>
   );
 };

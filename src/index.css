@@ -58,12 +58,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-.navigation {
-  display: flex;
-}
-
-.navigation > li {
-  margin-left: 20px;
-  list-style: none;
-}

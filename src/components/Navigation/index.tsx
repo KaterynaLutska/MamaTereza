@@ -1,8 +1,9 @@
 import React, { FC } from "react";
 
-
-import NavigationItem from "./NavigationItem";
 import { NavigationKeys, NavigationProps } from "@/types/Navigation";
+
+import "../../App.css";
+import NavigationItem from "./NavigationItem";
 
 const NAVIGATION: NavigationProps[] = [
   {

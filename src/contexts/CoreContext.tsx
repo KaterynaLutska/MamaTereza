@@ -1,6 +1,6 @@
-import { createContext } from 'react';
+import { createContext } from "react";
 
-import { CoreContextProps } from './types/CoreContext';
+import { CoreContextProps } from "./types/CoreContext";
 
 const CoreContext = createContext<CoreContextProps>({
   isLoggedIn: false,

@@ -1,7 +1,7 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState } from "react";
 
-import CoreContext from './CoreContext';
-import { CoreProviderProps } from './types/CoreContext';
+import CoreContext from "./CoreContext";
+import { CoreProviderProps } from "./types/CoreContext";
 
 const CoreProvider: FC<CoreProviderProps> = ({ children }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
