@@ -2,7 +2,7 @@ import React from "react";
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
-import { NavigationKeys } from "../../types.ts/Navigation";
+import { NavigationKeys } from "../../types/Navigation";
 
 interface NavigationItemProps {
   name: NavigationKeys;

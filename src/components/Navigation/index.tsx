@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 
-import { NavigationKeys, NavigationProps } from "../../types.ts/Navigation";
+
 import NavigationItem from "./NavigationItem";
+import { NavigationKeys, NavigationProps } from "@/types/Navigation";
 
 const NAVIGATION: NavigationProps[] = [
   {
