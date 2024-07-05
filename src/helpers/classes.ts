@@ -17,6 +17,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: "inherit",
     textDecoration: "none",
   },
+	activeLink: {
+    color: theme.palette.secondary.main, 
+  },
 }));
 
 export default useStyles;

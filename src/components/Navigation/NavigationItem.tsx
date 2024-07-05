@@ -1,24 +1,21 @@
 import React from "react";
 import { FC } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 
 import useStyles from "@helpers/classes";
 import { Button } from "@mui/material";
+import { NavigationItemProps } from "@/types/Navigation";
 
-import { NavigationKeys } from "../../types/Navigation";
-
-interface NavigationItemProps {
-  name: NavigationKeys;
-  link: string;
-}
 const NavigationItem: FC<NavigationItemProps> = ({ name, link }) => {
+	const location = useLocation();
   const classes = useStyles();
+	const activeClassName = location.pathname === link ? classes.activeLink : classes.navLinks
 
   return (
     <>
-      <Link to={link} className={classes.navLinks}>
+      <NavLink to={link} className={activeClassName}>
         <Button color="inherit">{name}</Button>
-      </Link>
+      </NavLink>
     </>
   );
 };

@@ -1,22 +1,22 @@
 import React, { FC } from "react";
 
-import { NavigationKeys, NavigationProps } from "@/types/Navigation";
-
-import "../../App.css";
+import { NavigationItemProps, NavigationKeys } from "@/types/Navigation";
 import NavigationItem from "./NavigationItem";
+import { ABOUT_PATH, CONTACTS_PATH, HOME_PATH } from "@utils/constants";
 
-const NAVIGATION: NavigationProps[] = [
+
+const NAVIGATION: NavigationItemProps[] = [
   {
     name: NavigationKeys.HOME,
-    link: "/",
+    link: HOME_PATH
   },
   {
     name: NavigationKeys.ABOUT,
-    link: "/about",
+    link: ABOUT_PATH,
   },
   {
     name: NavigationKeys.CONTACTS,
-    link: "/contacts",
+    link: CONTACTS_PATH
   },
 ];
 

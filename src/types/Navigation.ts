@@ -4,7 +4,7 @@ export enum NavigationKeys {
   CONTACTS = "CONTACTS",
 }
 
-export type NavigationProps = {
+export type NavigationItemProps = {
   name: NavigationKeys;
   link: string;
 };
