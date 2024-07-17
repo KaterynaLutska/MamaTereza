@@ -5,11 +5,10 @@ export const messagesData = [
       goal: "100000",
       time: "12.04.05",
     },
-		projeckts: {
+    projeckts: {
       name: "НА Дрони",
       goal: "100000",
       time: "12.04.05",
     },
-
   },
 ];

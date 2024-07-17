@@ -17,8 +17,14 @@ const useStyles = makeStyles((theme: Theme) => ({
     color: "inherit",
     textDecoration: "none",
   },
-	activeLink: {
-    color: theme.palette.secondary.main, 
+  activeLink: {
+    color: theme.palette.secondary.main,
+  },
+  breakpoints: {
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1280px",
   },
 }));
 

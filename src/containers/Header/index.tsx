@@ -1,26 +1,54 @@
+import { useState } from "react";
+
 import Logo from "@components/Logo";
 import Navigation from "@components/Navigation";
 import UserAccount from "@components/UserAccount";
+// import { useTheme } from "@emotion/react";
 import useStyles from "@helpers/classes";
+import MenuIcon from "@mui/icons-material/Menu";
+import { Menu } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
+import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 function Header() {
   const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+
+  const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleMenuClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <AppBar position="static" className={classes.appBar}>
       <Toolbar>
-        <IconButton edge="start" color="inherit" aria-label="menu">
-          <Logo />
-        </IconButton>
+        <Logo />
         <Typography variant="h6" className={classes.title}>
           Mama Tereza
         </Typography>
-        <Logo />
-        <Navigation />
+        {isMobile ? (
+          <div>
+            <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMenuOpen}>
+              <MenuIcon />
+            </IconButton>
+            <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={handleMenuClose}>
+              <Navigation isMobile={isMobile} />
+            </Menu>
+          </div>
+        ) : (
+          <div>
+            <Navigation isMobile={isMobile} />
+          </div>
+        )}
         <UserAccount />
       </Toolbar>
     </AppBar>

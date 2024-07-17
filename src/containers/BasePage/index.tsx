@@ -7,7 +7,9 @@ const BasePage: FC = () => {
   return (
     <>
       <Header />
-      <RoutesPath />
+      <div className="container">
+        <RoutesPath />
+      </div>
     </>
   );
 };
