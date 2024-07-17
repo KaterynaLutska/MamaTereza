@@ -16,7 +16,6 @@ export const Core: FC = () => {
         <I18nextProvider i18n={i18next}>
           <App />
         </I18nextProvider>
-        ,
         <CssBaseline />
       </CoreProvider>
     </ThemeProvider>
