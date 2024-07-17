@@ -1,9 +1,7 @@
 import { useState } from "react";
-
 import Logo from "@components/Logo";
 import Navigation from "@components/Navigation";
 import UserAccount from "@components/UserAccount";
-// import { useTheme } from "@emotion/react";
 import useStyles from "@helpers/classes";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Menu } from "@mui/material";
@@ -13,12 +11,14 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTranslation } from 'react-i18next';
 
 function Header() {
   const classes = useStyles();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+  const { t } = useTranslation();
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -28,12 +28,13 @@ function Header() {
     setAnchorEl(null);
   };
 
+
   return (
     <AppBar position="static" className={classes.appBar}>
       <Toolbar>
         <Logo />
         <Typography variant="h6" className={classes.title}>
-          Mama Tereza
+					{t("TITLE")}
         </Typography>
         {isMobile ? (
           <div>
