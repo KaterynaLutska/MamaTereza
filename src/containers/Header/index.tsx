@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import LanguageSwitch from "@components/ LanguageSwitch";
 import Logo from "@components/Logo";
 import Navigation from "@components/Navigation";
 import UserAccount from "@components/UserAccount";
@@ -50,7 +51,9 @@ function Header() {
             <Navigation isMobile={isMobile} />
           </div>
         )}
+
         <UserAccount />
+        <LanguageSwitch />
       </Toolbar>
     </AppBar>
   );

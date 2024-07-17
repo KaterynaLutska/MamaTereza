@@ -1,5 +1,10 @@
 {
   "TITLE": "Mama Tereza",
+  "LANGUAGE": {
+    "EN": "English",
+    "UA": "Українська"
+  },
+
   "LOGIN": "Login",
   "LOGOUT": "Logout",
   "PAGE": {

@@ -6,12 +6,8 @@ import { LANGUAGE_EN } from "@utils/constants";
 import en from "./locales/en.json";
 import ua from "./locales/ua.json";
 
-const getLanguage = () => {
-  return LANGUAGE_EN;
-};
-
 i18next.use(initReactI18next).init({
-  lng: getLanguage(),
+  lng: LANGUAGE_EN,
   fallbackLng: LANGUAGE_EN,
   interpolation: {
     escapeValue: false,
@@ -19,6 +15,9 @@ i18next.use(initReactI18next).init({
   resources: {
     en: {
       translation: en,
+    },
+    ua: {
+      translation: ua,
     },
   },
 });
