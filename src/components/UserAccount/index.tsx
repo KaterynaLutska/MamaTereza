@@ -1,15 +1,15 @@
 import React, { useContext } from "react";
+import { useTranslation } from "react-i18next";
 
 import { AccountCircle } from "@mui/icons-material";
 import { Button, IconButton } from "@mui/material";
 
 import CoreContext from "../../contexts/CoreContext";
 import { CoreContextProps } from "../../contexts/types/CoreContext";
-import { useTranslation } from "react-i18next";
 
 const UserAccount = () => {
   const { isLoggedIn, setIsLoggedIn } = useContext<CoreContextProps>(CoreContext);
-	const { t } = useTranslation();
+  const { t } = useTranslation();
 
   const handleOnClick = () => {
     setIsLoggedIn(!isLoggedIn);

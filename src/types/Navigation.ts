@@ -7,5 +7,5 @@ export enum NavigationKeys {
 export type NavigationItemProps = {
   name: NavigationKeys;
   link: string;
-	label: string
+  label: string;
 };

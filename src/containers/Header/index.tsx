@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+
 import Logo from "@components/Logo";
 import Navigation from "@components/Navigation";
 import UserAccount from "@components/UserAccount";
@@ -11,7 +13,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTranslation } from 'react-i18next';
 
 function Header() {
   const classes = useStyles();
@@ -28,13 +29,12 @@ function Header() {
     setAnchorEl(null);
   };
 
-
   return (
     <AppBar position="static" className={classes.appBar}>
       <Toolbar>
         <Logo />
         <Typography variant="h6" className={classes.title}>
-					{t("TITLE")}
+          {t("TITLE")}
         </Typography>
         {isMobile ? (
           <div>
