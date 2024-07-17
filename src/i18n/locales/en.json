@@ -1,0 +1,10 @@
+{
+  "TITLE": "Mama Tereza",
+  "LOGIN": "Login",
+  "LOGOUT": "Logout",
+  "PAGE": {
+    "HOME": "Home",
+    "ABOUT": "About",
+    "CONTACTS": "Contacts"
+  }
+}

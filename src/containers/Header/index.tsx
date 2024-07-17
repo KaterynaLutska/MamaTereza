@@ -1,9 +1,9 @@
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 import Logo from "@components/Logo";
 import Navigation from "@components/Navigation";
 import UserAccount from "@components/UserAccount";
-// import { useTheme } from "@emotion/react";
 import useStyles from "@helpers/classes";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Menu } from "@mui/material";
@@ -19,6 +19,7 @@ function Header() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
+  const { t } = useTranslation();
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -33,7 +34,7 @@ function Header() {
       <Toolbar>
         <Logo />
         <Typography variant="h6" className={classes.title}>
-          Mama Tereza
+          {t("TITLE")}
         </Typography>
         {isMobile ? (
           <div>

@@ -1,10 +1,11 @@
 export enum NavigationKeys {
-  HOME = "HOME",
-  ABOUT = "ABOUT",
-  CONTACTS = "CONTACTS",
+  HOME = "Home",
+  ABOUT = "About",
+  CONTACTS = "Contacts",
 }
 
 export type NavigationItemProps = {
   name: NavigationKeys;
   link: string;
+  label: string;
 };

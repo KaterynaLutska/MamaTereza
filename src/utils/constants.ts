@@ -4,3 +4,6 @@ export const PATH = {
   CONTACTS: "/contacts",
   ERROR: "*",
 };
+
+export const LANGUAGE_EN = "en";
+export const LANGUAGE_UA = "ua";
