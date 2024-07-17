@@ -1,6 +1,6 @@
 import React from "react";
 import { FC } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 import useStyles from "@helpers/classes";
 import { Button } from "@mui/material";
@@ -12,11 +12,9 @@ const NavigationItem: FC<NavigationItemProps> = ({ name, link }) => {
 	const activeClassName = location.pathname === link ? classes.activeLink : classes.navLinks
 
   return (
-    <>
       <NavLink to={link} className={activeClassName}>
         <Button color="inherit">{name}</Button>
       </NavLink>
-    </>
   );
 };
 export default NavigationItem;
