@@ -1,29 +1,36 @@
 import React, { FC } from "react";
 
 import { NavigationItemProps, NavigationKeys } from "@/types/Navigation";
-import NavigationItem from "./NavigationItem";
-import { ABOUT_PATH, CONTACTS_PATH, HOME_PATH } from "@utils/constants";
+import { PATH } from "@utils/constants";
 
+import NavigationItem from "./NavigationItem";
+
+const { HOME, ABOUT, CONTACTS } = PATH;
+
+interface NavigationProps {
+  isMobile: boolean;
+}
 
 const NAVIGATION: NavigationItemProps[] = [
   {
     name: NavigationKeys.HOME,
-    link: HOME_PATH
+    link: HOME,
   },
   {
     name: NavigationKeys.ABOUT,
-    link: ABOUT_PATH,
+    link: ABOUT,
   },
   {
     name: NavigationKeys.CONTACTS,
-    link: CONTACTS_PATH
+    link: CONTACTS,
   },
 ];
 
-const Navigation: FC = () => {
+const Navigation: FC<NavigationProps> = ({ isMobile }) => {
+  const style = isMobile ? "navigation-mobile" : "navigation";
   return (
     <nav>
-      <ul className="navigation">
+      <ul className={style}>
         {NAVIGATION.map((item) => (
           <li key={item.name}>
             <NavigationItem name={item.name} link={item.link} />

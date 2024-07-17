@@ -1,14 +1,16 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+}
+
+.container {
+  padding: 15px;
 }
 
 .logo {
-  height: 40px;
-  width: 40px;
-  padding: 1.5em;
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -16,11 +18,15 @@
   filter: drop-shadow(0 0 2em #646cffaa);
 }
 
+.navigation-mobile {
+  display: block;
+  padding: 10px;
+}
 .navigation {
   display: flex;
 }
 
-.navigation > li {
-  margin-left: 20px;
+.navigation > li,
+.navigation-mobile > li {
   list-style: none;
 }

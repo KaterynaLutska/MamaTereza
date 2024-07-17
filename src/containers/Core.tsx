@@ -8,12 +8,12 @@ import { ThemeProvider } from "@mui/material/styles";
 
 export const Core: FC = () => {
   return (
-		<ThemeProvider theme={theme}>
-    <CoreProvider>
+    <ThemeProvider theme={theme}>
+      <CoreProvider>
         <CssBaseline />
         <App />
         <CssBaseline />
-    </CoreProvider>
-		</ThemeProvider>
+      </CoreProvider>
+    </ThemeProvider>
   );
 };
