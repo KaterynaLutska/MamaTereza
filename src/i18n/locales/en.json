@@ -4,12 +4,23 @@
     "EN": "English",
     "UA": "Українська"
   },
-
   "LOGIN": "Login",
   "LOGOUT": "Logout",
   "PAGE": {
     "HOME": "Home",
     "ABOUT": "About",
     "CONTACTS": "Contacts"
+  },
+  "FOOTER": {
+    "ABOUT_US": "About Us",
+    "ABOUT_US_TEXT": "We are committed to providing the best support for our troops and their families",
+    "CONTACTS": "Contacts",
+    "EMAIL": "Email: support@example.com",
+    "PHONE": "Phone: +1 234 567 890",
+    "FOLLOW_US": "Follow Us",
+    "FACEBOOK": "Facebook",
+    "X": "X",
+    "INSTAGRAM": "Instagram",
+    "RIGHTS": "Mama Tereza. All rights reserved."
   }
 }
