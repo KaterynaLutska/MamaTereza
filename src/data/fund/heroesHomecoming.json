@@ -1,21 +1,25 @@
 {
 	"name": "HeroesHomecoming",
+	"id": 2,
 	"capital": 1500000,
 	"foundedYear": 2020,
 	"projects": [
 		{
+			"id": 21,
 			"projectName": "Reintegration Support",
 			"fundraisingGoal": 1500000,
 			"purpose": "Assisting with the reintegration of soldiers into civilian life",
 			"collected": 800000
 		},
 		{
+			"id": 22,
 			"projectName": "Job Placement",
 			"fundraisingGoal": 1000000,
 			"purpose": "Job placement services for veterans",
 			"collected": 600000
 		},
 		{
+			"id": 23,
 			"projectName": "Vocational Training",
 			"fundraisingGoal": 500000,
 			"purpose": "Providing vocational training for veterans",

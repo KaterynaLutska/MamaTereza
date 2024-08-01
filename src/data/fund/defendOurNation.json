@@ -1,21 +1,25 @@
 {
 	"name": "DefendOurNation",
+	"id": 1,
 	"capital": 4000000,
 	"foundedYear": 2018,
 	"projects": [
 		{
+			"id": 11,
 			"projectName": "Equipment Purchase",
 			"fundraisingGoal": 7000000,
 			"purpose": "Purchasing advanced military equipment",
 			"collected": 5000000
 		},
 		{
+			"id": 12,
 			"projectName": "Technology Development",
 			"fundraisingGoal": 3000000,
 			"purpose": "Developing new military technologies",
 			"collected": 2000000
 		},
 		{
+			"id": 13,
 			"projectName": "Training Programs",
 			"fundraisingGoal": 2000000,
 			"purpose": "Training programs for new recruits",
