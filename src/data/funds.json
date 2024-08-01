@@ -1,0 +1,7 @@
+[
+  { "name": "DefendOurNation", "id": 1, "capital": 4000000, "foundedYear": 2018 },
+  { "name": "HeroesHomecoming", "id": 2, "capital": 1500000, "foundedYear": 2020 },
+  { "name": "MilitaryAidFoundation", "id": 3, "capital": 2000000, "foundedYear": 2015 },
+  { "name": "SupportOurTroops", "id": 4, "capital": 5000000, "foundedYear": 2010 },
+  { "name": "WarriorReliefFund", "id": 5, "capital": 3000000, "foundedYear": 2012 }
+]
