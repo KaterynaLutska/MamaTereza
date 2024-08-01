@@ -1,31 +1,31 @@
 {
-	"name": "MilitaryAidFoundation",
-	"capital": 2000000,
-	"foundedYear": 2015,
-	"id": 3,
-	"projects": [
-		{
-			"id": 31,
-			"projectName": "Medical Supplies",
-			"fundraisingGoal": 2000000,
-			"purpose": "Providing medical supplies to field hospitals",
-			"collected": 1200000
-		},
-		{
-			"id": 32,
-			"projectName": "Mental Health",
-			"fundraisingGoal": 1500000,
-			"purpose": "Counseling services for soldiers",
-			"collected": 900000
-		},
-		{
-			"id": 33,
-			"projectName": "Rehabilitation Centers",
-			"fundraisingGoal": 1500000,
-			"purpose": "Building rehabilitation centers for injured soldiers",
-			"collected": 700000
-		}
-	],
-	"info": "Partnered with over 50 hospitals worldwide.",
-	"imageURL": "https://war.ukraine.ua/wp-content/uploads/2022/03/116__A-couple-of-Ukrainian-defenders-are-holding-hands-in-Kyiv-17-March-2022-By-Sergei-Supinsky.jpg"
+  "name": "MilitaryAidFoundation",
+  "capital": 2000000,
+  "foundedYear": 2015,
+  "id": 3,
+  "projects": [
+    {
+      "id": 31,
+      "projectName": "Medical Supplies",
+      "fundraisingGoal": 2000000,
+      "purpose": "Providing medical supplies to field hospitals",
+      "collected": 1200000
+    },
+    {
+      "id": 32,
+      "projectName": "Mental Health",
+      "fundraisingGoal": 1500000,
+      "purpose": "Counseling services for soldiers",
+      "collected": 900000
+    },
+    {
+      "id": 33,
+      "projectName": "Rehabilitation Centers",
+      "fundraisingGoal": 1500000,
+      "purpose": "Building rehabilitation centers for injured soldiers",
+      "collected": 700000
+    }
+  ],
+  "info": "Partnered with over 50 hospitals worldwide.",
+  "imageURL": "https://war.ukraine.ua/wp-content/uploads/2022/03/116__A-couple-of-Ukrainian-defenders-are-holding-hands-in-Kyiv-17-March-2022-By-Sergei-Supinsky.jpg"
 }

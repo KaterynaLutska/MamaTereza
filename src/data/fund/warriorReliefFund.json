@@ -1,31 +1,31 @@
 {
-	"name": "WarriorReliefFund",
-	"id": 5,
-	"capital": 3000000,
-	"foundedYear": 2012,
-	"projects": [
-		{
-			"id": 51,
-			"projectName": "Mental Health Support",
-			"fundraisingGoal": 2000000,
-			"purpose": "Providing mental health support for veterans",
-			"collected": 1500000
-		},
-		{
-			"id": 52,
-			"projectName": "Family Counseling",
-			"fundraisingGoal": 1000000,
-			"purpose": "Family counseling services for military families",
-			"collected": 500000
-		},
-		{
-			"id": 53,
-			"projectName": "Crisis Intervention",
-			"fundraisingGoal": 1000000,
-			"purpose": "Crisis intervention services for veterans in need",
-			"collected": 700000
-		}
-	],
-	"info": "Provides free counseling services.",
-	"imageURL": "https://24tv.ua/resources/photos/news/202212/2222082.jpg?v=1671636134000&w=768&h=432&fit=cover&output=webp&q=70"
+  "name": "WarriorReliefFund",
+  "id": 5,
+  "capital": 3000000,
+  "foundedYear": 2012,
+  "projects": [
+    {
+      "id": 51,
+      "projectName": "Mental Health Support",
+      "fundraisingGoal": 2000000,
+      "purpose": "Providing mental health support for veterans",
+      "collected": 1500000
+    },
+    {
+      "id": 52,
+      "projectName": "Family Counseling",
+      "fundraisingGoal": 1000000,
+      "purpose": "Family counseling services for military families",
+      "collected": 500000
+    },
+    {
+      "id": 53,
+      "projectName": "Crisis Intervention",
+      "fundraisingGoal": 1000000,
+      "purpose": "Crisis intervention services for veterans in need",
+      "collected": 700000
+    }
+  ],
+  "info": "Provides free counseling services.",
+  "imageURL": "https://24tv.ua/resources/photos/news/202212/2222082.jpg?v=1671636134000&w=768&h=432&fit=cover&output=webp&q=70"
 }

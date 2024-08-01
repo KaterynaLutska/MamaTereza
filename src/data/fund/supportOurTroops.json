@@ -1,32 +1,31 @@
-
+{
+  "name": "SupportOurTroops",
+  "id": 4,
+  "capital": 5000000,
+  "foundedYear": 2010,
+  "projects": [
     {
-      "name": "SupportOurTroops",
-			"id": 4,
-      "capital": 5000000,
-      "foundedYear": 2010,
-      "projects": [
-        {
-					"id": 41,
-          "projectName": "Frontline Supplies",
-          "fundraisingGoal": 4000000,
-          "purpose": "Providing essential supplies to troops on the front lines",
-          "collected": 2500000
-        },
-        {
-					"id": 42,
-          "projectName": "Veterans Housing",
-          "fundraisingGoal": 3000000,
-          "purpose": "Building housing for homeless veterans",
-          "collected": 1500000
-        },
-        {
-					"id": 43,
-          "projectName": "Family Support",
-          "fundraisingGoal": 3000000,
-          "purpose": "Financial aid for families of fallen soldiers",
-          "collected": 2000000
-        }
-      ],
-      "info": "This fund was started by a group of veterans.",
-			 "imageURL": "https://www.knuba.edu.ua/wp-content/uploads/2022/12/%D0%B2%D0%B8%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0.jpg"
+      "id": 41,
+      "projectName": "Frontline Supplies",
+      "fundraisingGoal": 4000000,
+      "purpose": "Providing essential supplies to troops on the front lines",
+      "collected": 2500000
+    },
+    {
+      "id": 42,
+      "projectName": "Veterans Housing",
+      "fundraisingGoal": 3000000,
+      "purpose": "Building housing for homeless veterans",
+      "collected": 1500000
+    },
+    {
+      "id": 43,
+      "projectName": "Family Support",
+      "fundraisingGoal": 3000000,
+      "purpose": "Financial aid for families of fallen soldiers",
+      "collected": 2000000
     }
+  ],
+  "info": "This fund was started by a group of veterans.",
+  "imageURL": "https://www.knuba.edu.ua/wp-content/uploads/2022/12/%D0%B2%D0%B8%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B0.jpg"
+}
