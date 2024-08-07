@@ -5,6 +5,7 @@
   "foundedYear": 2018,
   "projects": [
     {
+			"fundId": 1,
       "id": 11,
       "projectName": "Equipment Purchase",
       "fundraisingGoal": 7000000,
@@ -12,6 +13,7 @@
       "collected": 5000000
     },
     {
+			"fundId": 1,
       "id": 12,
       "projectName": "Technology Development",
       "fundraisingGoal": 3000000,
@@ -19,6 +21,7 @@
       "collected": 2000000
     },
     {
+			"fundId": 1,
       "id": 13,
       "projectName": "Training Programs",
       "fundraisingGoal": 2000000,
