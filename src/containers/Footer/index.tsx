@@ -7,8 +7,8 @@ import { EMAIL_ADDRESS, PHONE_NUMBER } from "@utils/constants";
 
 const Footer = () => {
   const { t } = useTranslation();
-  
-	return (
+
+  return (
     <Box
       sx={{
         width: "100%",
