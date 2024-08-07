@@ -3,6 +3,11 @@
   margin: 0 auto;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 .container {
   padding: 15px;
 }
