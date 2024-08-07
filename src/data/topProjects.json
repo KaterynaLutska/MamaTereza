@@ -1,0 +1,34 @@
+[
+  {
+    "fundId": 1,
+    "id": 12,
+    "projectName": "Technology Development",
+    "fundraisingGoal": 3000000,
+    "purpose": "Developing new military technologies",
+    "collected": 2000000
+  },
+  {
+    "fundId": 2,
+    "id": 23,
+    "projectName": "Vocational Training",
+    "fundraisingGoal": 500000,
+    "purpose": "Providing vocational training for veterans",
+    "collected": 300000
+  },
+  {
+    "fundId": 3,
+    "id": 31,
+    "projectName": "Medical Supplies",
+    "fundraisingGoal": 2000000,
+    "purpose": "Providing medical supplies to field hospitals",
+    "collected": 1200000
+  },
+  {
+    "fundId": 4,
+    "id": 42,
+    "projectName": "Veterans Housing",
+    "fundraisingGoal": 3000000,
+    "purpose": "Building housing for homeless veterans",
+    "collected": 1500000
+  }
+]
