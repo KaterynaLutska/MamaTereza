@@ -7,9 +7,8 @@ import { EMAIL_ADDRESS, PHONE_NUMBER } from "@utils/constants";
 
 const Footer = () => {
   const { t } = useTranslation();
-
-
-  return (
+  
+	return (
     <Box
       sx={{
         width: "100%",
@@ -39,7 +38,6 @@ const Footer = () => {
               </a>
             </Typography>
             <Typography variant="body2">
-           
               {t("FOOTER.PHONE")}
               <a href={`tel:${PHONE_NUMBER}`} style={{ textDecoration: "none", color: "white" }}>
                 {PHONE_NUMBER}
