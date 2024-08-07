@@ -3,9 +3,12 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 
 import { Box, Container, Grid, Link, Typography } from "@mui/material";
+import { EMAIL_ADDRESS, PHONE_NUMBER } from "@utils/constants";
 
 const Footer = () => {
   const { t } = useTranslation();
+
+
   return (
     <Box
       sx={{
@@ -29,8 +32,19 @@ const Footer = () => {
             <Typography variant="h6" gutterBottom>
               {t("FOOTER.CONTACTS")}
             </Typography>
-            <Typography variant="body2"> {t("FOOTER.EMAIL")}</Typography>
-            <Typography variant="body2"> {t("FOOTER.PHONE")}</Typography>
+            <Typography variant="body2">
+              {t("FOOTER.EMAIL")}
+              <a href={`mailto:${EMAIL_ADDRESS}`} style={{ textDecoration: "none", color: "white", marginLeft: "5px" }}>
+                {EMAIL_ADDRESS}
+              </a>
+            </Typography>
+            <Typography variant="body2">
+           
+              {t("FOOTER.PHONE")}
+              <a href={`tel:${PHONE_NUMBER}`} style={{ textDecoration: "none", color: "white" }}>
+                {PHONE_NUMBER}
+              </a>
+            </Typography>
           </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" gutterBottom>

@@ -5,7 +5,7 @@
   "foundedYear": 2020,
   "projects": [
     {
-			"fundId": 2,
+      "fundId": 2,
       "id": 21,
       "projectName": "Reintegration Support",
       "fundraisingGoal": 1500000,
@@ -13,7 +13,7 @@
       "collected": 800000
     },
     {
-			"fundId": 2,
+      "fundId": 2,
       "id": 22,
       "projectName": "Job Placement",
       "fundraisingGoal": 1000000,
@@ -21,7 +21,7 @@
       "collected": 600000
     },
     {
-			"fundId": 2,
+      "fundId": 2,
       "id": 23,
       "projectName": "Vocational Training",
       "fundraisingGoal": 500000,

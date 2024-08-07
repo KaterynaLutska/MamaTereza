@@ -5,7 +5,7 @@
   "id": 3,
   "projects": [
     {
-			"fundId": 3,
+      "fundId": 3,
       "id": 31,
       "projectName": "Medical Supplies",
       "fundraisingGoal": 2000000,
@@ -13,7 +13,7 @@
       "collected": 1200000
     },
     {
-			"fundId": 3,
+      "fundId": 3,
       "id": 32,
       "projectName": "Mental Health",
       "fundraisingGoal": 1500000,
@@ -21,7 +21,7 @@
       "collected": 900000
     },
     {
-			"fundId": 3,
+      "fundId": 3,
       "id": 33,
       "projectName": "Rehabilitation Centers",
       "fundraisingGoal": 1500000,
