@@ -16,9 +16,9 @@ const BasePage: FC = () => {
       }}
     >
       <Header />
-      <div className="container">
-        <RoutesPath />
-      </div>
+
+      <RoutesPath />
+
       <Footer />
     </Box>
   );
