@@ -5,7 +5,7 @@
   "foundedYear": 2010,
   "projects": [
     {
-			"fundId": 4,
+      "fundId": 4,
       "id": 41,
       "projectName": "Frontline Supplies",
       "fundraisingGoal": 4000000,
@@ -13,7 +13,7 @@
       "collected": 2500000
     },
     {
-			"fundId": 4,
+      "fundId": 4,
       "id": 42,
       "projectName": "Veterans Housing",
       "fundraisingGoal": 3000000,
@@ -21,7 +21,7 @@
       "collected": 1500000
     },
     {
-			"fundId": 4,
+      "fundId": 4,
       "id": 43,
       "projectName": "Family Support",
       "fundraisingGoal": 3000000,
