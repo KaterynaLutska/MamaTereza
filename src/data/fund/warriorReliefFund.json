@@ -10,7 +10,8 @@
       "projectName": "Mental Health Support",
       "fundraisingGoal": 2000000,
       "purpose": "Providing mental health support for veterans",
-      "collected": 1500000
+      "collected": 1500000,
+      "closingDate": "2024-09-29"
     },
     {
       "fundId": 5,
@@ -18,7 +19,8 @@
       "projectName": "Family Counseling",
       "fundraisingGoal": 1000000,
       "purpose": "Family counseling services for military families",
-      "collected": 500000
+      "collected": 500000,
+      "closingDate": "2024-10-15"
     },
     {
       "fundId": 5,
@@ -26,7 +28,8 @@
       "projectName": "Crisis Intervention",
       "fundraisingGoal": 1000000,
       "purpose": "Crisis intervention services for veterans in need",
-      "collected": 700000
+      "collected": 700000,
+      "closingDate": "2024-10-30"
     }
   ],
   "info": "Provides free counseling services.",

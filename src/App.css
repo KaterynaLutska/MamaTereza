@@ -35,3 +35,9 @@ body {
 .navigation-mobile > li {
   list-style: none;
 }
+
+.funs_list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

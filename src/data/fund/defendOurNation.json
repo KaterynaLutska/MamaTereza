@@ -10,7 +10,8 @@
       "projectName": "Equipment Purchase",
       "fundraisingGoal": 7000000,
       "purpose": "Purchasing advanced military equipment",
-      "collected": 5000000
+      "collected": 5000000,
+      "closingDate": "2024-12-31"
     },
     {
       "fundId": 1,
@@ -18,7 +19,8 @@
       "projectName": "Technology Development",
       "fundraisingGoal": 3000000,
       "purpose": "Developing new military technologies",
-      "collected": 2000000
+      "collected": 2000000,
+      "closingDate": "2024-09-31"
     },
     {
       "fundId": 1,
@@ -26,7 +28,8 @@
       "projectName": "Training Programs",
       "fundraisingGoal": 2000000,
       "purpose": "Training programs for new recruits",
-      "collected": 1000000
+      "collected": 1000000,
+      "closingDate": "2024-08-20"
     }
   ],
   "info": "Uses state-of-the-art technology for fund allocation.",

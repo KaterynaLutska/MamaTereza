@@ -10,7 +10,8 @@
       "projectName": "Medical Supplies",
       "fundraisingGoal": 2000000,
       "purpose": "Providing medical supplies to field hospitals",
-      "collected": 1200000
+      "collected": 1200000,
+      "closingDate": "2024-11-17"
     },
     {
       "fundId": 3,
@@ -18,7 +19,8 @@
       "projectName": "Mental Health",
       "fundraisingGoal": 1500000,
       "purpose": "Counseling services for soldiers",
-      "collected": 900000
+      "collected": 900000,
+      "closingDate": "2024-12-17"
     },
     {
       "fundId": 3,
@@ -26,7 +28,8 @@
       "projectName": "Rehabilitation Centers",
       "fundraisingGoal": 1500000,
       "purpose": "Building rehabilitation centers for injured soldiers",
-      "collected": 700000
+      "collected": 700000,
+      "closingDate": "2024-12-15"
     }
   ],
   "info": "Partnered with over 50 hospitals worldwide.",

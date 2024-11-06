@@ -10,7 +10,8 @@
       "projectName": "Reintegration Support",
       "fundraisingGoal": 1500000,
       "purpose": "Assisting with the reintegration of soldiers into civilian life",
-      "collected": 800000
+      "collected": 800000,
+      "closingDate": "2024-09-17"
     },
     {
       "fundId": 2,
@@ -18,7 +19,8 @@
       "projectName": "Job Placement",
       "fundraisingGoal": 1000000,
       "purpose": "Job placement services for veterans",
-      "collected": 600000
+      "collected": 600000,
+      "closingDate": "2024-09-23"
     },
     {
       "fundId": 2,
@@ -26,7 +28,8 @@
       "projectName": "Vocational Training",
       "fundraisingGoal": 500000,
       "purpose": "Providing vocational training for veterans",
-      "collected": 300000
+      "collected": 300000,
+      "closingDate": "2024-10-17"
     }
   ],
   "info": "Offers job placement services and vocational training.",
