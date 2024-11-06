@@ -1,15 +1,15 @@
 import { FC, useContext } from "react";
 
 import FundCard from "@components/FundCard";
+import Loader from "@components/Loader";
 import { FundsContext } from "@contexts/FundsContext";
 import { FundsContextProps } from "@contexts/types/FundsContext";
-import Loader from "@components/Loader";
 
 const FundsPage: FC = () => {
   const { funds, isLoaded } = useContext<FundsContextProps>(FundsContext);
 
   if (!isLoaded) {
-    return <Loader/>
+    return <Loader />;
   }
   return (
     <div>
