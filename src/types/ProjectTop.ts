@@ -1,4 +1,4 @@
-export interface ProjectsTop {
+export interface ProjectTop {
   fundId: number;
   id: number;
   projectName: string;
