@@ -1,9 +1,10 @@
-import React, { FC, useState } from "react";
+import { FC, useState } from "react";
 
 import { LANGUAGE_EN } from "@utils/constants";
 
 import CoreContext from "./CoreContext";
-import { StoreContext, StoreContextProvider } from "./StoreContext";
+import { FundsContextProvider } from "./FundsContext";
+import { ProjectsContextProvider } from "./ProjectsContext";
 import { CoreProviderProps } from "./types/CoreContext";
 
 const CoreProvider: FC<CoreProviderProps> = ({ children }) => {
@@ -11,11 +12,13 @@ const CoreProvider: FC<CoreProviderProps> = ({ children }) => {
   const [language, setLanguage] = useState(LANGUAGE_EN);
 
   return (
-    <StoreContextProvider>
-      <CoreContext.Provider value={{ isLoggedIn, setIsLoggedIn, language, setLanguage }}>
-        {children}
-      </CoreContext.Provider>
-    </StoreContextProvider>
+    <FundsContextProvider>
+      <ProjectsContextProvider>
+        <CoreContext.Provider value={{ isLoggedIn, setIsLoggedIn, language, setLanguage }}>
+          {children}
+        </CoreContext.Provider>
+      </ProjectsContextProvider>
+    </FundsContextProvider>
   );
 };
 

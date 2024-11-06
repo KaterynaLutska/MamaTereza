@@ -1,7 +1,5 @@
 import { FC } from "react";
-
-import { Box, CssBaseline } from "@mui/material";
-
+import { Box } from "@mui/material";
 import Footer from "../Footer";
 import Header from "../Header";
 import RoutesPath from "../RoutesPath";
@@ -16,9 +14,7 @@ const BasePage: FC = () => {
       }}
     >
       <Header />
-
       <RoutesPath />
-
       <Footer />
     </Box>
   );

@@ -1,16 +1,16 @@
 import { FC } from "react";
 
-import { ProjectTop } from "@/types/ProjectTop";
+import { Project } from "@/types/Project";
 import { Card, CardContent, Typography } from "@mui/material";
 
 interface ProjectCardProps {
   key: string;
-  project: ProjectTop;
+  project: Project;
 }
 
-const ProjectCard: FC<ProjectCardProps> = ({ key, project }) => {
+const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
   return (
-    <Card key={key} sx={{ maxWidth: 345, margin: 2, boxShadow: 3 }}>
+    <Card key={project.projectName} sx={{ maxWidth: 345, margin: 2, boxShadow: 3 }}>
       <CardContent>
         <Typography variant="h5" component="div">
           {project.projectName}

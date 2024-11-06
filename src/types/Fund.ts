@@ -1,4 +1,4 @@
-import { Projects } from "./Projects";
+import { Project } from "./Project";
 
 export interface Fund {
   name: string;
@@ -7,5 +7,5 @@ export interface Fund {
   foundedYear: number;
   imageURL: string;
   info: string;
-  projects: Projects;
+  projects: Project[];
 }

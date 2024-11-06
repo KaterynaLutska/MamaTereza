@@ -1,16 +1,16 @@
 import { useContext } from "react";
 
 import ProjectCard from "@components/ProjectCard";
-import { StoreContext } from "@contexts/StoreContext";
-import { StoreContextProps } from "@contexts/types/StoreContext";
+import { ProjectsContext } from "@contexts/ProjectsContext";
+import { ProjectsContextProps } from "@contexts/types/ProjectsContext";
 
 const FeaturedSection = () => {
-  const { projectsTop } = useContext<StoreContextProps>(StoreContext);
+  const { projects } = useContext<ProjectsContextProps>(ProjectsContext);
 
   return (
     <div>
       <ul className="funs_list">
-        {projectsTop.map((project) => (
+        {projects.map((project) => (
           <ProjectCard project={project} key={project.projectName} />
         ))}
       </ul>

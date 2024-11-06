@@ -6,7 +6,7 @@ import { PATH } from "@utils/constants";
 
 import NavigationItem from "./NavigationItem";
 
-const { HOME, ABOUT, CONTACTS } = PATH;
+const { HOME, ABOUT, CONTACTS, FUNDS } = PATH;
 
 interface NavigationProps {
   isMobile: boolean;
@@ -20,6 +20,11 @@ const Navigation: FC<NavigationProps> = ({ isMobile }) => {
       name: NavigationKeys.HOME,
       label: t("PAGE.HOME"),
       link: HOME,
+    },
+    {
+      name: NavigationKeys.FUNDS,
+      label: t("PAGE.FUNDS"),
+      link: FUNDS,
     },
     {
       name: NavigationKeys.ABOUT,

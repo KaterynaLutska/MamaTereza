@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Box, Button, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
-import heroImg from "../..img/hero.jpg";
+//import heroImg from "../..img/hero.jpg";
 
 const HeroSection: React.FC = () => {
   const theme = useTheme();
@@ -18,7 +18,7 @@ const HeroSection: React.FC = () => {
         minHeight="35vh"
         textAlign="center"
         sx={{
-          backgroundImage: `url(${heroImg})`,
+          //backgroundImage: `url(${heroImg})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           color: "white",

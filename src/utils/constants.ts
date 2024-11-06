@@ -3,6 +3,7 @@ export const PATH = {
   ABOUT: "/about",
   CONTACTS: "/contacts",
   ERROR: "*",
+  FUNDS: "/funds",
 };
 
 export const LANGUAGE_EN = "en";
