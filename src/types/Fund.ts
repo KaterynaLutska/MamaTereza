@@ -5,7 +5,7 @@ export interface Fund {
   id: number;
   capital: number;
   foundedYear: number;
-	imageURL: string
-	info: string,
-	projects: Projects
+  imageURL: string;
+  info: string;
+  projects: Projects;
 }

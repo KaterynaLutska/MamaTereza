@@ -1,9 +1,8 @@
-
 export interface ProjectsTop {
   fundId: number;
-	id: number;
+  id: number;
   projectName: string;
   fundraisingGoal: number;
-	purpose: string,
-	collected: number
+  purpose: string;
+  collected: number;
 }

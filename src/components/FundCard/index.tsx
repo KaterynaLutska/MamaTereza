@@ -1,29 +1,22 @@
-import React from 'react';
-import { CardContent, CardMedia, Typography, IconButton, Card } from '@mui/material';
-import { CheckCircle, Cancel } from '@mui/icons-material';
-import { Fund } from '@/types/Fund';
+import React from "react";
 
+import { Fund } from "@/types/Fund";
+import { Cancel, CheckCircle } from "@mui/icons-material";
+import { Card, CardContent, CardMedia, IconButton, Typography } from "@mui/material";
 
 interface FundCardProps {
   fund: Fund;
-	key: string;
+  key: string;
 }
 
 const FundCard: React.FC<FundCardProps> = ({ fund, key }) => {
-
-	function handleOnclick () {
-		console.log('click');
-		
-	}
+  function handleOnclick() {
+    console.log("click");
+  }
 
   return (
-		<button key={key} onClick={handleOnclick}>
-      <CardMedia
-        component="img"
-        alt={fund.name}
-        height="140"
-        src={fund.imageURL}
-      />
+    <button key={key} onClick={handleOnclick}>
+      <CardMedia component="img" alt={fund.name} height="140" src={fund.imageURL} />
       <CardContent>
         <Typography variant="h6" component="div">
           {fund.name}
@@ -32,9 +25,7 @@ const FundCard: React.FC<FundCardProps> = ({ fund, key }) => {
           {fund.foundedYear}
         </Typography>
         <div>
-          <Typography variant="body1">
-            Collected: ${fund.capital}
-          </Typography>
+          <Typography variant="body1">Collected: ${fund.capital}</Typography>
         </div>
       </CardContent>
     </button>
