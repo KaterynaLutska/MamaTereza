@@ -1,11 +1,10 @@
 import { FC } from "react";
-
-import { ProjectsTop } from "@/types/ProjectsTop";
 import { Card, CardContent, Typography } from "@mui/material";
+import { ProjectTop } from "@/types/ProjectTop";
 
 interface ProjectCardProps {
   key: string;
-  project: ProjectsTop;
+  project: ProjectTop;
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ key, project }) => {

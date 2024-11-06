@@ -1,26 +1,14 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useContext, useEffect, useState } from "react";
 
 import { Fund } from "@/types/Fund";
 import { fetchFunds } from "@api/request";
 import FundCard from "@components/FundCard";
+import { StoreContext } from "@contexts/StoreContext";
+import { StoreContextProps } from "@contexts/types/StoreContext";
+
 
 const AboutPage: FC = () => {
-  const [funds, setFunds] = useState<Fund[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadFunds = async () => {
-      try {
-        const data: Fund[] = await fetchFunds();
-        setFunds(data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadFunds();
-  }, []);
+	const { funds} = useContext<StoreContextProps>(StoreContext)
 
   return (
     <div>

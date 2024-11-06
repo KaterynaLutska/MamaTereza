@@ -1,33 +1,15 @@
-import { useEffect, useState } from "react";
-
-import { ProjectsTop } from "@/types/ProjectsTop";
-import { fetchTopProject } from "@api/request";
+import { useContext } from "react";
 import ProjectCard from "@components/ProjectCard";
+import { StoreContextProps } from "@contexts/types/StoreContext";
+import { StoreContext } from "@contexts/StoreContext";
 
 const FeaturedSection = () => {
-  const [projects, setProject] = useState<ProjectsTop[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const loadFunds = async () => {
-      try {
-        const data: ProjectsTop[] = await fetchTopProject();
-        setProject(data);
-      } catch (error) {
-        console.log(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadFunds();
-  }, []);
-
-  if (loading) return <div>Loading...</div>;
+	const { projectsTop} = useContext<StoreContextProps>(StoreContext)
 
   return (
     <div>
       <ul className="funs_list">
-        {projects.map((project) => (
+        {projectsTop.map((project) => (
           <ProjectCard project={project} key={project.projectName} />
         ))}
       </ul>
