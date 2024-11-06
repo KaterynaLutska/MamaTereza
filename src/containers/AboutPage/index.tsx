@@ -6,9 +6,8 @@ import FundCard from "@components/FundCard";
 import { StoreContext } from "@contexts/StoreContext";
 import { StoreContextProps } from "@contexts/types/StoreContext";
 
-
 const AboutPage: FC = () => {
-	const { funds} = useContext<StoreContextProps>(StoreContext)
+  const { funds } = useContext<StoreContextProps>(StoreContext);
 
   return (
     <div>

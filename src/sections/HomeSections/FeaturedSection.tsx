@@ -1,10 +1,11 @@
 import { useContext } from "react";
+
 import ProjectCard from "@components/ProjectCard";
-import { StoreContextProps } from "@contexts/types/StoreContext";
 import { StoreContext } from "@contexts/StoreContext";
+import { StoreContextProps } from "@contexts/types/StoreContext";
 
 const FeaturedSection = () => {
-	const { projectsTop} = useContext<StoreContextProps>(StoreContext)
+  const { projectsTop } = useContext<StoreContextProps>(StoreContext);
 
   return (
     <div>
