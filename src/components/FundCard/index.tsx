@@ -14,7 +14,7 @@ const FundCard: FC<FundCardProps> = ({ fund }) => {
   const navigate = useNavigate();
 
   function handleOnclick() {
-    const slug = generateSlug(fund.name, fund.id);
+    const slug = generateSlug(fund.name);
     navigate(`/funds/${slug}`);
   }
 

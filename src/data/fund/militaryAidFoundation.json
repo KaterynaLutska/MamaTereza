@@ -7,7 +7,7 @@
     {
       "fundId": 3,
       "id": 31,
-      "projectName": "Medical Supplies",
+      "name": "Medical Supplies",
       "fundraisingGoal": 2000000,
       "purpose": "Providing medical supplies to field hospitals",
       "collected": 1200000,
@@ -16,7 +16,7 @@
     {
       "fundId": 3,
       "id": 32,
-      "projectName": "Mental Health",
+      "name": "Mental Health",
       "fundraisingGoal": 1500000,
       "purpose": "Counseling services for soldiers",
       "collected": 900000,
@@ -25,7 +25,7 @@
     {
       "fundId": 3,
       "id": 33,
-      "projectName": "Rehabilitation Centers",
+      "name": "Rehabilitation Centers",
       "fundraisingGoal": 1500000,
       "purpose": "Building rehabilitation centers for injured soldiers",
       "collected": 700000,

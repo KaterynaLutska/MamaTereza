@@ -7,7 +7,7 @@
     {
       "fundId": 2,
       "id": 21,
-      "projectName": "Reintegration Support",
+      "name": "Reintegration Support",
       "fundraisingGoal": 1500000,
       "purpose": "Assisting with the reintegration of soldiers into civilian life",
       "collected": 800000,
@@ -16,7 +16,7 @@
     {
       "fundId": 2,
       "id": 22,
-      "projectName": "Job Placement",
+      "name": "Job Placement",
       "fundraisingGoal": 1000000,
       "purpose": "Job placement services for veterans",
       "collected": 600000,
@@ -25,7 +25,7 @@
     {
       "fundId": 2,
       "id": 23,
-      "projectName": "Vocational Training",
+      "name": "Vocational Training",
       "fundraisingGoal": 500000,
       "purpose": "Providing vocational training for veterans",
       "collected": 300000,

@@ -4,16 +4,16 @@ import { Project } from "@/types/Project";
 import { Card, CardContent, Typography } from "@mui/material";
 
 interface ProjectCardProps {
-  key: string;
+  key?: string;
   project: Project;
 }
 
 const ProjectCard: FC<ProjectCardProps> = ({ project }) => {
   return (
-    <Card key={project.projectName} sx={{ maxWidth: 345, margin: 2, boxShadow: 3 }}>
+    <Card key={project.name} sx={{ maxWidth: 345, margin: 2, boxShadow: 3 }}>
       <CardContent>
         <Typography variant="h5" component="div">
-          {project.projectName}
+          {project.name}
         </Typography>
         <Typography variant="body1" color="text.secondary">
           Мета збору: {project.fundraisingGoal} грн

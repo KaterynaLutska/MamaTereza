@@ -1,3 +1,3 @@
-export function generateSlug(name: string, id: number): string {
-  return `${name.toLowerCase().replace(/ /g, "-")}-${id}`;
+export function generateSlug(name: string): string {
+  return `${name.toLowerCase().replace(/ /g, "-")}`;
 }

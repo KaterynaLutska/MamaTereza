@@ -9,8 +9,9 @@ import ContactsPage from "../ContactsPage";
 import ErrorPage from "../ErrorPage";
 import FundsPage from "../FundsPage";
 import HomePage from "../HomePage";
+import ProjectsPage from "../ProjectsPage";
 
-const { ABOUT, CONTACTS, ERROR, HOME, FUNDS } = PATH;
+const { ABOUT, CONTACTS, ERROR, HOME, FUNDS, PROJECTS } = PATH;
 
 const RoutesPath: FC = () => {
   return (
@@ -18,9 +19,10 @@ const RoutesPath: FC = () => {
       <Route path={HOME} element={<HomePage />} />
       <Route path={ABOUT} element={<AboutPage />} />
       <Route path={FUNDS} element={<FundsPage />} />
+      <Route path={PROJECTS} element={<ProjectsPage />} />
       <Route path={CONTACTS} element={<ContactsPage />} />
       <Route path={ERROR} element={<ErrorPage />} />
-      <Route path="/funds/:slug" element={<FundDetails />} />
+      <Route path={`${FUNDS}/:slug`} element={<FundDetails />} />
     </Routes>
   );
 };

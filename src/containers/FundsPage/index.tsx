@@ -15,7 +15,7 @@ const FundsPage: FC = () => {
     <div>
       <h1>Funds</h1>
       {isLoaded && (
-        <ul className="funs_list">
+        <ul className="funds_list">
           {funds.map((fund) => (
             <FundCard fund={fund} key={fund.name} />
           ))}

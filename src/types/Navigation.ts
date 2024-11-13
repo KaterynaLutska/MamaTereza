@@ -3,6 +3,7 @@ export enum NavigationKeys {
   ABOUT = "About",
   FUNDS = "FUNDS",
   CONTACTS = "Contacts",
+  PROJECTS = "Projects",
 }
 
 export type NavigationItemProps = {

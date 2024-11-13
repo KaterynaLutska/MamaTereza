@@ -7,7 +7,7 @@
     {
       "fundId": 5,
       "id": 51,
-      "projectName": "Mental Health Support",
+      "name": "Mental Health Support",
       "fundraisingGoal": 2000000,
       "purpose": "Providing mental health support for veterans",
       "collected": 1500000,
@@ -16,7 +16,7 @@
     {
       "fundId": 5,
       "id": 52,
-      "projectName": "Family Counseling",
+      "name": "Family Counseling",
       "fundraisingGoal": 1000000,
       "purpose": "Family counseling services for military families",
       "collected": 500000,
@@ -25,7 +25,7 @@
     {
       "fundId": 5,
       "id": 53,
-      "projectName": "Crisis Intervention",
+      "name": "Crisis Intervention",
       "fundraisingGoal": 1000000,
       "purpose": "Crisis intervention services for veterans in need",
       "collected": 700000,

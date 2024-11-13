@@ -7,7 +7,7 @@
     {
       "fundId": 4,
       "id": 41,
-      "projectName": "Frontline Supplies",
+      "name": "Frontline Supplies",
       "fundraisingGoal": 4000000,
       "purpose": "Providing essential supplies to troops on the front lines",
       "collected": 2500000,
@@ -16,7 +16,7 @@
     {
       "fundId": 4,
       "id": 42,
-      "projectName": "Veterans Housing",
+      "name": "Veterans Housing",
       "fundraisingGoal": 3000000,
       "purpose": "Building housing for homeless veterans",
       "collected": 1500000,
@@ -25,7 +25,7 @@
     {
       "fundId": 4,
       "id": 43,
-      "projectName": "Family Support",
+      "name": "Family Support",
       "fundraisingGoal": 3000000,
       "purpose": "Financial aid for families of fallen soldiers",
       "collected": 2000000,

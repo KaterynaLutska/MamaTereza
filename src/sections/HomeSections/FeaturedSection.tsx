@@ -5,13 +5,14 @@ import { ProjectsContext } from "@contexts/ProjectsContext";
 import { ProjectsContextProps } from "@contexts/types/ProjectsContext";
 
 const FeaturedSection = () => {
-  const { projects } = useContext<ProjectsContextProps>(ProjectsContext);
+  const { topProjects } = useContext<ProjectsContextProps>(ProjectsContext);
 
   return (
     <div>
-      <ul className="funs_list">
-        {projects.map((project) => (
-          <ProjectCard project={project} key={project.projectName} />
+      <h2>Our Top Projects</h2>
+      <ul className="funds_list">
+        {topProjects.map((topProject) => (
+          <ProjectCard project={topProject} key={topProject.name} />
         ))}
       </ul>
     </div>

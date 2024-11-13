@@ -1,7 +1,7 @@
 export interface Project {
   fundId: number;
   id: number;
-  projectName: string;
+  name: string;
   fundraisingGoal: number;
   purpose: string;
   collected: number;

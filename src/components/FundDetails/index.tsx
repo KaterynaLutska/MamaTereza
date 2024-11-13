@@ -3,16 +3,24 @@ import { useParams } from "react-router-dom";
 
 import ProjectDetails from "@components/ProjectDetails";
 import { FundsContext } from "@contexts/FundsContext";
+import { ProjectsContext } from "@contexts/ProjectsContext";
 import { FundsContextProps } from "@contexts/types/FundsContext";
-import { findFundById } from "@helpers/findFundById";
+import { ProjectsContextProps } from "@contexts/types/ProjectsContext";
+import { generateSlug } from "@helpers/generateSlug";
+import { getProjectsByFund } from "@helpers/getProjectsForFund";
 import { Box, Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 
 const FundDetails: FC = () => {
   const { funds } = useContext<FundsContextProps>(FundsContext);
+  const { projects, updateProject } = useContext<ProjectsContextProps>(ProjectsContext);
   const { slug } = useParams();
 
-  const fundId = parseInt(slug?.split("-").pop() || "", 10);
-  const fund = findFundById(funds, fundId);
+  let projectsByFund;
+  const fund = funds.find((fund) => slug === generateSlug(fund.name));
+
+  if (fund) {
+    projectsByFund = getProjectsByFund(fund.id, projects);
+  }
 
   if (!fund) {
     return <p>Fund not found</p>;
@@ -44,8 +52,8 @@ const FundDetails: FC = () => {
           <Typography variant="h5" gutterBottom>
             Projects
           </Typography>
-          {fund.projects.map((project) => (
-            <ProjectDetails project={project} />
+          {projectsByFund?.map((project) => (
+            <ProjectDetails project={project} key={project.id} slug={slug} updateProject={updateProject} />
           ))}
         </Box>
       </Card>

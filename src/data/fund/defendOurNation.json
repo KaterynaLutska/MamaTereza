@@ -7,7 +7,7 @@
     {
       "fundId": 1,
       "id": 11,
-      "projectName": "Equipment Purchase",
+      "name": "Equipment Purchase",
       "fundraisingGoal": 7000000,
       "purpose": "Purchasing advanced military equipment",
       "collected": 5000000,
@@ -16,7 +16,7 @@
     {
       "fundId": 1,
       "id": 12,
-      "projectName": "Technology Development",
+      "name": "Technology Development",
       "fundraisingGoal": 3000000,
       "purpose": "Developing new military technologies",
       "collected": 2000000,
@@ -25,7 +25,7 @@
     {
       "fundId": 1,
       "id": 13,
-      "projectName": "Training Programs",
+      "name": "Training Programs",
       "fundraisingGoal": 2000000,
       "purpose": "Training programs for new recruits",
       "collected": 1000000,
