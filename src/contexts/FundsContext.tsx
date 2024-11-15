@@ -7,8 +7,10 @@ import { FundsContextProps, FundsProviderProps } from "./types/FundsContext";
 const defaultState = {
   funds: [],
   setFunds: () => {},
+
   isLoaded: false,
   setIsLoaded: () => {},
+
   updateFunds: () => {},
   compareFundsWithData: () => {},
 
