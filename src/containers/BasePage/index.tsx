@@ -1,5 +1,6 @@
 import { FC } from "react";
 
+import CoreProvider from "@contexts/CoreProvider";
 import { Box } from "@mui/material";
 
 import Footer from "../Footer";
@@ -8,17 +9,19 @@ import RoutesPath from "../RoutesPath";
 
 const BasePage: FC = () => {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        minHeight: "100vh",
-      }}
-    >
-      <Header />
-      <RoutesPath />
-      <Footer />
-    </Box>
+    <CoreProvider>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          minHeight: "100vh",
+        }}
+      >
+        <Header />
+        <RoutesPath />
+        <Footer />
+      </Box>
+    </CoreProvider>
   );
 };
 

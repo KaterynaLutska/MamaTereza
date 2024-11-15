@@ -42,11 +42,11 @@ export const ProjectsContextProvider: FC<ProjectsProviderProps> = ({ children })
   };
 
   useEffect(() => {
-    getAllProjects();
+    //getAllProjects();
   }, []);
 
   useEffect(() => {
-    getTopProjects();
+    //getTopProjects();
   }, []);
 
   const updateProject = (id: number, newCollectedValue: number) => {
