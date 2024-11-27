@@ -15,7 +15,7 @@ const defaultState = {
   isLoaded: true,
   setIsLoaded: () => {},
 
-  compareProjectWithData: () => {},
+  compareProjectWithData: () => false,
 
   isAllProjectExist: false,
   setAllProjectExist: () => {},
@@ -63,6 +63,9 @@ export const ProjectsContextProvider: FC<ProjectsProviderProps> = ({ children })
 
         updateProject,
         compareProjectWithData,
+
+        isAllProjectExist,
+        setAllProjectExist,
       }}
     >
       {children}

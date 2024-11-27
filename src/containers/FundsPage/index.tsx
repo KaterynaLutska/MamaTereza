@@ -19,7 +19,7 @@ const FundsPage: FC = () => {
           setFunds(data);
           setNewFunds(data);
           setIsLoaded(false);
-          const isAllFundsExist = compareFundsWithData(newFunds, funds);
+          const isAllFundsExist: boolean = compareFundsWithData(newFunds, funds);
           setAllFundsExist(isAllFundsExist);
         })
         .catch((error) => {

@@ -12,7 +12,7 @@ const defaultState = {
   setIsLoaded: () => {},
 
   updateFunds: () => {},
-  compareFundsWithData: () => {},
+  compareFundsWithData: () => false,
 
   isAllFundsExist: false,
   setAllFundsExist: () => {},

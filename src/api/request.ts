@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 import { Fund } from "@/types/Fund";
 import { Project } from "@/types/Project";
@@ -62,8 +62,9 @@ export const fetchNewCollectedAmount = async (amount: number, slug: string | und
   };
 
   return axios(requestConfig)
-    .then((response) => {
-      return fetchProjects().then(() => response.data || []);
+    .then(async (response) => {
+      await fetchProjects();
+      return response.data || [];
     })
     .catch((error) => {
       console.error("Failed to update donation:", error);

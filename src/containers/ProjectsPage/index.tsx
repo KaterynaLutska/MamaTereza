@@ -9,8 +9,7 @@ import { ProjectsContextProps } from "@contexts/types/ProjectsContext";
 
 const ProjectsPage: FC = () => {
   const [newProjects, setNewProjects] = useState<Project[]>([]);
-  const { isLoaded, projects, setProjects, setIsLoaded, compareFundsWithData } =
-    useContext<ProjectsContextProps>(ProjectsContext);
+  const { isLoaded, projects, setProjects, setIsLoaded } = useContext<ProjectsContextProps>(ProjectsContext);
 
   const getAllProjects = async () => {
     try {

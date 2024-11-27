@@ -10,7 +10,7 @@ export interface FundsContextProps {
   setIsLoaded: Dispatch<SetStateAction<boolean>>;
 
   updateFunds: (newFund: Fund) => void;
-  compareFundsWithData: (funds: Fund[], stateFunds: Fund[]) => {};
+  compareFundsWithData: (funds: Fund[], stateFunds: Fund[]) => boolean;
 
   isAllFundsExist: boolean;
   setAllFundsExist: Dispatch<SetStateAction<boolean>>;
