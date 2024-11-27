@@ -7,9 +7,18 @@ import { ProjectsContextProps, ProjectsProviderProps } from "./types/ProjectsCon
 
 const defaultState = {
   projects: [],
+  setProjects: () => {},
+
   topProjects: [],
-  isLoaded: true,
   updateProject: () => {},
+
+  isLoaded: true,
+  setIsLoaded: () => {},
+
+  compareProjectWithData: () => {},
+
+  isAllProjectExist: false,
+  setAllProjectExist: () => {},
 };
 
 export const ProjectsContext = createContext<ProjectsContextProps>(defaultState);
@@ -18,6 +27,7 @@ export const ProjectsContextProvider: FC<ProjectsProviderProps> = ({ children })
   const [projects, setProjects] = useState<Project[]>([]);
   const [topProjects, setTopProjects] = useState<Project[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isAllProjectExist, setAllProjectExist] = useState<boolean>(false);
 
   const getTopProjects = async () => {
     try {
@@ -30,38 +40,29 @@ export const ProjectsContextProvider: FC<ProjectsProviderProps> = ({ children })
     }
   };
 
-  const getAllProjects = async () => {
-    try {
-      const data: Project[] = await fetchProjects();
-      setProjects(data);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoaded(false);
-    }
-  };
-
-  useEffect(() => {
-    //getAllProjects();
-  }, []);
-
-  useEffect(() => {
-    //getTopProjects();
-  }, []);
-
   const updateProject = (id: number, newCollectedValue: number) => {
     setProjects((prevProjects) =>
       prevProjects.map((p) => (p.id === id ? { ...p, collected: p.collected + newCollectedValue } : p)),
     );
   };
 
+  const compareProjectWithData = (data: Project[], currentProjects: Project[]): boolean => {
+    return data.every((project) => currentProjects.some((p) => p.id === project.id));
+  };
+
   return (
     <ProjectsContext.Provider
       value={{
         projects,
+        setProjects,
+
         topProjects,
+
         isLoaded,
+        setIsLoaded,
+
         updateProject,
+        compareProjectWithData,
       }}
     >
       {children}

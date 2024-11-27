@@ -9,7 +9,7 @@ import { FundsContextProps } from "@contexts/types/FundsContext";
 
 const FundsPage: FC = () => {
   const [newFunds, setNewFunds] = useState<Fund[]>([]);
-  const { isLoaded, setFunds, funds, setIsLoaded, compareFundsWithData, isAllFundsExist, setIsAllFundsExist } =
+  const { isLoaded, setFunds, funds, setIsLoaded, compareFundsWithData, isAllFundsExist, setAllFundsExist } =
     useContext<FundsContextProps>(FundsContext);
 
   const loadFunds = () => {
@@ -20,7 +20,7 @@ const FundsPage: FC = () => {
           setNewFunds(data);
           setIsLoaded(false);
           const isAllFundsExist = compareFundsWithData(newFunds, funds);
-          setIsAllFundsExist(isAllFundsExist);
+          setAllFundsExist(isAllFundsExist);
         })
         .catch((error) => {
           console.error("Failed to load funds:", error);

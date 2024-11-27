@@ -15,7 +15,7 @@ const defaultState = {
   compareFundsWithData: () => {},
 
   isAllFundsExist: false,
-  setIsAllFundsExist: () => {},
+  setAllFundsExist: () => {},
 };
 
 export const FundsContext = createContext<FundsContextProps>(defaultState);
@@ -23,7 +23,7 @@ export const FundsContext = createContext<FundsContextProps>(defaultState);
 export const FundsContextProvider: FC<FundsProviderProps> = ({ children }) => {
   const [funds, setFunds] = useState<Fund[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isAllFundsExist, setIsAllFundsExist] = useState<boolean>(false);
+  const [isAllFundsExist, setAllFundsExist] = useState<boolean>(false);
 
   const updateFunds = (newFund: Fund) => {
     setFunds((prevFunds) => {
@@ -43,13 +43,13 @@ export const FundsContextProvider: FC<FundsProviderProps> = ({ children }) => {
     <FundsContext.Provider
       value={{
         funds,
-        isLoaded,
         setFunds,
+        isLoaded,
         setIsLoaded,
         updateFunds,
         compareFundsWithData,
         isAllFundsExist,
-        setIsAllFundsExist,
+        setAllFundsExist,
       }}
     >
       {children}
