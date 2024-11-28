@@ -4,18 +4,21 @@ import { useNavigate } from "react-router-dom";
 import { Fund } from "@/types/Fund";
 import { generateSlug } from "@helpers/generateSlug";
 import { CardContent, CardMedia, Typography } from "@mui/material";
+import { PATH } from "@utils/constants";
 
 interface FundCardProps {
   fund: Fund;
   key: string;
 }
 
+const { FUNDS } = PATH;
+
 const FundCard: FC<FundCardProps> = ({ fund }) => {
   const navigate = useNavigate();
 
   function handleOnclick() {
     const slug = generateSlug(fund.name);
-    navigate(`/funds/${slug}`);
+    navigate(`${FUNDS}/${slug}`);
   }
 
   return (
