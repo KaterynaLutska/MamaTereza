@@ -9,16 +9,27 @@ import { FundsContextProps } from "@contexts/types/FundsContext";
 
 const FundsPage: FC = () => {
   const [newFunds, setNewFunds] = useState<Fund[]>([]);
-  const { isLoaded, setFunds, funds, setIsLoaded, compareFundsWithData, isAllFundsExist, setAllFundsExist } =
-    useContext<FundsContextProps>(FundsContext);
+  const {
+    funds,
+    setFunds,
+    fundsBySlug,
+    isLoaded,
+    setIsLoaded,
+    isLoading,
+    setIsLoading,
+    compareFundsWithData,
+    isAllFundsExist,
+    setAllFundsExist,
+  } = useContext<FundsContextProps>(FundsContext);
 
   const loadFunds = () => {
-    if (!isAllFundsExist) {
+    if (!isLoaded && !isLoading && !isAllFundsExist) {
       fetchFunds()
         .then((data: Fund[]) => {
           setFunds(data);
           setNewFunds(data);
           setIsLoaded(false);
+          setIsLoading(true);
           const isAllFundsExist: boolean = compareFundsWithData(newFunds, funds);
           setAllFundsExist(isAllFundsExist);
         })
@@ -27,13 +38,21 @@ const FundsPage: FC = () => {
         })
         .finally(() => {
           setIsLoaded(true);
+          setIsLoading(false);
+
+          console.log("is Loaded", isLoaded);
+          console.log("is isLoading", isLoading);
         });
     }
   };
 
   useEffect(() => {
     loadFunds();
+    console.log("Loaded", isLoaded);
+    console.log("Loading", isLoading);
   }, []);
+
+  console.log("fundsBySlug", fundsBySlug);
 
   if (!isLoaded) {
     return <Loader />;
