@@ -1,48 +1,51 @@
-import { FC, useContext, useEffect, useState } from "react";
+import { FC, useContext, useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { Fund } from "@/types/Fund";
 import { fetchFundsBySlug } from "@api/request";
+import Loader from "@components/Loader";
 import { FundsContext } from "@contexts/FundsContext";
 import { FundsContextProps } from "@contexts/types/FundsContext";
-import { generateSlug } from "@helpers/generateSlug";
 import { Box, Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 
 const FundDetails: FC = () => {
-  const [fund, setFund] = useState<Fund>();
-  const [isLoaded, setIsLoaded] = useState(false);
-  const { funds, updateFunds } = useContext<FundsContextProps>(FundsContext);
+  const effectWasExecuted = useRef(false);
+
+  const { fundsBySlug, updateFunds, isLoaded, setIsLoaded } = useContext<FundsContextProps>(FundsContext);
 
   const { slug } = useParams();
 
+  const fund = slug ? fundsBySlug[slug] : undefined;
+
   const loadFund = () => {
-    if (!fund && slug) {
+    if (slug && !fund) {
       fetchFundsBySlug(slug)
         .then((data: Fund) => {
-          setFund(data);
-          setIsLoaded(false);
+          setIsLoaded(true);
           updateFunds(data);
         })
         .catch((error) => {
           console.error("Failed to load funds:", error);
         })
         .finally(() => {
-          setIsLoaded(true);
+          setIsLoaded(false);
         });
     }
   };
 
   useEffect(() => {
-    const fund = funds.find((fund) => {
-      const fundSlug = generateSlug(fund.name);
-      return fundSlug === slug;
-    });
-    if (fund) {
-      setFund(fund);
-    } else {
+    if (!effectWasExecuted.current && !fund && !isLoaded) {
       loadFund();
+      effectWasExecuted.current = true;
+    }
+    if (fund) {
+      setIsLoaded(false);
     }
   }, []);
+
+  if (isLoaded) {
+    return <Loader />;
+  }
 
   return (
     <Box sx={{ padding: 4 }}>
@@ -73,7 +76,7 @@ const FundDetails: FC = () => {
             </Typography>
             {/* {getProjectsByFund?.map((project) => (
               <ProjectDetails project={project} key={project.id} slug={slug} updateProject={updateProject} />
-            ))}  */}
+            ))} */}
           </Box>
         </Card>
       )}

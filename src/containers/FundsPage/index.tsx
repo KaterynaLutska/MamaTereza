@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect, useState } from "react";
+import { FC, useContext, useEffect, useRef, useState } from "react";
 
 import { Fund } from "@/types/Fund";
 import { fetchFunds } from "@api/request";
@@ -9,40 +9,55 @@ import { FundsContextProps } from "@contexts/types/FundsContext";
 
 const FundsPage: FC = () => {
   const [newFunds, setNewFunds] = useState<Fund[]>([]);
-  const { isLoaded, setFunds, funds, setIsLoaded, compareFundsWithData, isAllFundsExist, setAllFundsExist } =
-    useContext<FundsContextProps>(FundsContext);
+  const effectWasExecuted = useRef(false);
+
+  const {
+    funds,
+    setFunds,
+    setIsLoaded,
+    isLoading,
+    setIsLoading,
+    compareFundsWithData,
+    isAllFundsExist,
+    setAllFundsExist,
+  } = useContext<FundsContextProps>(FundsContext);
 
   const loadFunds = () => {
     if (!isAllFundsExist) {
+      setIsLoading(true);
       fetchFunds()
         .then((data: Fund[]) => {
           setFunds(data);
           setNewFunds(data);
-          setIsLoaded(false);
+          setIsLoading(false);
+          // setIsLoaded(true);
           const isAllFundsExist: boolean = compareFundsWithData(newFunds, funds);
           setAllFundsExist(isAllFundsExist);
         })
         .catch((error) => {
           console.error("Failed to load funds:", error);
+          setIsLoaded(false);
         })
         .finally(() => {
-          setIsLoaded(true);
+          setIsLoading(false);
         });
     }
   };
-
   useEffect(() => {
-    loadFunds();
+    if (!effectWasExecuted.current) {
+      loadFunds();
+      effectWasExecuted.current = true;
+    }
   }, []);
 
-  if (!isLoaded) {
+  if (isLoading) {
     return <Loader />;
   }
 
   return (
     <div>
       <h1>Funds</h1>
-      {isLoaded && (
+      {funds && (
         <ul className="funds_list">
           {funds.map((fund) => (
             <FundCard fund={fund} key={fund.name} />

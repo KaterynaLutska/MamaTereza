@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect, useState } from "react";
+import { FC, useContext, useEffect, useRef, useState } from "react";
 
 import { Project } from "@/types/Project";
 import { fetchProjects } from "@api/request";
@@ -8,6 +8,7 @@ import { ProjectsContext } from "@contexts/ProjectsContext";
 import { ProjectsContextProps } from "@contexts/types/ProjectsContext";
 
 const ProjectsPage: FC = () => {
+  const effectWasExecuted = useRef(false);
   const [newProjects, setNewProjects] = useState<Project[]>([]);
   const { isLoaded, projects, setProjects, setIsLoaded } = useContext<ProjectsContextProps>(ProjectsContext);
 
@@ -23,7 +24,10 @@ const ProjectsPage: FC = () => {
   };
 
   useEffect(() => {
-    getAllProjects();
+    if (!effectWasExecuted.current) {
+      getAllProjects();
+      effectWasExecuted.current = true;
+    }
   }, []);
 
   if (isLoaded) {

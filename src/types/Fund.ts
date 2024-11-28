@@ -9,3 +9,7 @@ export interface Fund {
   info: string;
   projects: Project[];
 }
+
+export interface FundsBySlug {
+  [slug: string]: Fund;
+}
